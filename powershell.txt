@@ -44,3 +44,8 @@ Take-ScreenShot -screen -file "C:\image.png" -imagetype png
 
 #屏幕截图--Take-ScreenShot分析
 #https://blog.csdn.net/ZCMUCZX/article/details/101948149
+
+#PowerShell 远程执行任务
+#https://www.cnblogs.com/sparkdev/p/7200004.html
+PowerShell 就是通过 WinRM 服务来进行远程操作的
+Get-Service WinRM
