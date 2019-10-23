@@ -1,0 +1,46 @@
+#WSUS
+#https://devblogs.microsoft.com/scripting/introduction-to-wsus-and-powershell/
+Windows Software Update Services (WSUS) is used by system administrators to manage the distribution of updates and hotfixes that are released by Microsoft for an environment
+
+#查看已安装补丁
+wmic qfe list
+
+
+#windows – 通过PowerShell自动化WSUS
+http://www.voidcn.com/article/p-mxfezsmx-btx.html
+
+#PowerShell 通过 WMI 获取补丁
+Get-WmiObject Win32_QuickFixEngineering
+
+
+#PowerShell 通过 WMI 获取系统服务
+#https://cloud.tencent.com/developer/article/1402356
+Get-WmiObject Win32_Service | Format-List Caption,State
+
+#Powershell 安装指定离线更新补丁
+#利用powershell 升级WIN7_64到POwershell 到5.1版本 当然也可以安装其它离线补丁,环境是域,当前登陆的用户是域管理员,
+#利用WUSA和DISM安装,如果不解压直接运行.MSU文件是一闪而过,不会安装任何东西
+https://www.cnblogs.com/luoguiming/p/11585014.html
+
+
+#利用POSERSHELL域内生成IT资产报表
+https://www.cnblogs.com/luoguiming/p/11585460.html
+
+
+#Powershell中打开网页实例
+#https://www.jb51.net/article/62739.htm
+# starts with a specific browser
+Start-Process -FilePath iexplore -ArgumentList www.jb51.net
+
+# starts with default browser and adds to open browser
+Start-Process -FilePath www.jb51.net
+
+
+#PowerShell截屏
+#https://gallery.technet.microsoft.com/scriptcenter/eeff544a-f690-4f6b-a586-11eea6fc5eb8
+#https://www.pstips.net/take-screenshot.html
+Take-ScreenShot -file "$_.png" -screen
+Take-ScreenShot -screen -file "C:\image.png" -imagetype png 
+
+#屏幕截图--Take-ScreenShot分析
+#https://blog.csdn.net/ZCMUCZX/article/details/101948149
