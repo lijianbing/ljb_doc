@@ -70,3 +70,17 @@ wait powershell.exe -WindowStyle Hidden -NonInteractive -ExecutionPolicy Bypass 
 waithidden powershell.exe -ExecutionPolicy Bypass C:\Users\asyed\Documents\WindowsUnquote\WindowsUnquote.ps1
 
 runhidden powershell.exe -ExecutionPolicy Bypass C:\Users\asyed\Documents\WindowsUnquote\WindowsUnquote.ps1
+
+
+#服务器名
+hostname.exe
+$Env:Computername
+Get-WMIObject –Class Win32_Bios | Select PSComputername, __Server
+
+
+#Powershell Filter Operators
+#https://adsecurity.org/?p=297
+-eq
+-ne
+-like
+-notlike
