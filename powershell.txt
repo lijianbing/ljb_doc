@@ -59,3 +59,14 @@ Get-WmiObject Win32_Service | Measure-Object   -Line
 wait-process -name outlook, winword -timeout 30
 
 get-process lsass | stop-process
+
+
+#Running Powershell Script through BigFix
+#https://forum.bigfix.com/t/running-powershell-script-through-bigfix/28410
+wait powershell.exe -ExecutionPolicy Bypass C:\Users\asyed\Documents\WindowsUnquote\WindowsUnquote.ps1
+
+wait powershell.exe -WindowStyle Hidden -NonInteractive -ExecutionPolicy Bypass C:\Users\asyed\Documents\WindowsUnquote\WindowsUnquote.ps1
+
+waithidden powershell.exe -ExecutionPolicy Bypass C:\Users\asyed\Documents\WindowsUnquote\WindowsUnquote.ps1
+
+runhidden powershell.exe -ExecutionPolicy Bypass C:\Users\asyed\Documents\WindowsUnquote\WindowsUnquote.ps1
