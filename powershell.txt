@@ -84,3 +84,7 @@ Get-WMIObject –Class Win32_Bios | Select PSComputername, __Server
 -ne
 -like
 -notlike
+
+
+https://adamtheautomator.com/powershell-start-process/
+https://raw.githubusercontent.com/jampaniharish/OnlineScripts/master/Get-installedPatch.ps1
